@@ -2,6 +2,7 @@
 #include "setting.h"
 #include "Jadwal.h"
 #include <SoftwareSerial.h>
+#include <Arduino_FreeRTOS.h>
 
 SoftwareSerial bt(2, 3);
 
