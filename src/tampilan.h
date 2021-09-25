@@ -163,51 +163,44 @@ void Efek::centerOut(int x, int y, int x1, int y1)
     delay(EEPROM.read(offsetof(Setting, tundaEfek)));
 }
 
-void Efek::leftout(int x, int y, int x1, int y1)
-{
-    int panjangEfek = x + x1;
-    for (int i = 0; i < panjangEfek; i++)
-    {
-        display.drawFilledRect(x1, y1, x1 - i, y, 0);
-        display.swapBuffersAndCopy();
-        delay(mem.read(offsetof(Setting, kecepatanEfek)) / 2);
-    }
-}
+// void Efek::leftout(int x, int y, int x1, int y1)
+// {
+//     int panjangEfek = x + x1;
+//     for (int i = 0; i < panjangEfek; i++)
+//     {
+//         display.drawFilledRect(x1, y1, x1 - i, y, 0);
+//         display.swapBuffersAndCopy();
+//         delay(mem.read(offsetof(Setting, kecepatanEfek)) / 2);
+//     }
+// }
 
-void Efek::rightOut(int x, int y, int x1, int y1)
-{
-    int panjangEfek = x + x1;
-    for (int i = 0; i < panjangEfek; i++)
-    {
-        display.drawFilledRect(x, y, x + i, y1, 0);
-        display.swapBuffersAndCopy();
-        delay(mem.read(offsetof(Setting, kecepatanEfek)) / 2);
-    }
-}
-void Efek::upOut(int x, int y, int x1, int y1)
-{
-    int tinggiEfek = y + y1;
-    for (int i = 0; i < tinggiEfek; i++)
-    {
-        display.drawFilledRect(x, y + i, x1, y, 0);
-        display.swapBuffersAndCopy();
-        delay(mem.read(offsetof(Setting, kecepatanEfek)));
-    }
-}
-void Efek::downOut(int x, int y, int x1, int y1)
-{
-    int panjangEfek = x + x1;
-    for (int i = 0; i < panjangEfek; i++)
-    {
-        display.drawFilledRect(x, y1, x1, y1 - i, 0);
-        display.swapBuffersAndCopy();
-        delay(mem.read(offsetof(Setting, kecepatanEfek)));
-    }
-}
+//
 
-void Efek::rightIn(int x, int y, int x1, int y1)
-{
-}
+// void Efek::upOut(int x, int y, int x1, int y1)
+// {
+//     int tinggiEfek = y + y1;
+//     for (int i = 0; i < tinggiEfek; i++)
+//     {
+//         display.drawFilledRect(x, y + i, x1, y, 0);
+//         display.swapBuffersAndCopy();
+//         delay(mem.read(offsetof(Setting, kecepatanEfek)));
+//     }
+// }
+
+// void Efek::downOut(int x, int y, int x1, int y1)
+// {
+//     int panjangEfek = x + x1;
+//     for (int i = 0; i < panjangEfek; i++)
+//     {
+//         display.drawFilledRect(x, y1, x1, y1 - i, 0);
+//         display.swapBuffersAndCopy();
+//         delay(mem.read(offsetof(Setting, kecepatanEfek)));
+//     }
+// }
+
+// void Efek::rightIn(int x, int y, int x1, int y1)
+// {
+// }
 
 void pindahJam(byte pos)
 {
